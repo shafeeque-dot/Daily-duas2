@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f5b4c">
+<meta name="description" content="41 daily duas with Arabic text, Malayalam and English meanings">
+<title>ദൈനംദിന ദുആകൾ · Daily Duas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&family=Noto+Sans+Malayalam:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f1e8;--card:#ffffff;--ink:#1c2925;--muted:#64716c;--brand:#0f5b4c;--brand2:#9a6f1e;
+  --line:#e5dfd0;--chip:#ebe6d8;--ar:26px;--ml:16px;--shadow:0 1px 4px rgba(20,40,30,.08);
+}
+[data-theme=dark]{
+  --bg:#0e1614;--card:#16211e;--ink:#e6eeea;--muted:#9bb0a7;--brand:#1f7a66;--brand2:#e0bb63;
+  --line:#243630;--chip:#1d2b26;--shadow:none;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans Malayalam',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:480px;margin:0 auto;min-height:100vh}
+header{position:sticky;top:0;z-index:5;background:var(--brand);color:#fff;padding:16px 14px 12px;border-radius:0 0 20px 20px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+h1{font-size:19px;margin:0;font-weight:700}
+.sub{font-size:12px;opacity:.85;margin-top:2px}
+.tools{display:flex;gap:6px}
+.icon-btn{background:rgba(255,255,255,.16);border:0;color:#fff;min-width:36px;height:36px;border-radius:10px;font:inherit;font-size:14px;cursor:pointer;padding:0 8px}
+input[type=search]{width:100%;margin-top:12px;padding:11px 14px;border-radius:12px;border:0;font:inherit;font-size:15px;background:#fff;color:#1c2925;outline:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:6px 12px;border-radius:999px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:#fff;color:var(--brand);border-color:#fff;font-weight:600}
+.bar{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:10px;flex-wrap:wrap}
+.seg{display:flex;background:rgba(255,255,255,.15);border-radius:10px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;color:#fff;padding:6px 9px;border-radius:8px;font:inherit;font-size:12.5px;cursor:pointer}
+.seg button.on{background:#fff;color:var(--brand);font-weight:600}
+main{padding:14px 12px 30px}
+.count{font-size:13px;color:var(--muted);margin:2px 4px 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}
+.head{display:flex;gap:10px;align-items:flex-start}
+.num{flex:0 0 32px;height:32px;border-radius:10px;background:var(--chip);color:var(--brand);font-weight:700;display:grid;place-items:center;font-size:14px}
+.ttl{font-size:16px;font-weight:600;line-height:1.6}
+.ttl small{display:block;font-weight:400;font-size:12px;color:var(--muted);font-family:system-ui,sans-serif}
+.ar{direction:rtl;text-align:center;font-family:'Amiri Quran','Scheherazade New','Amiri','Noto Naskh Arabic','Arabic Typesetting','Traditional Arabic','Geeza Pro',serif;font-size:var(--ar);line-height:2.4;margin:14px 0 6px;padding:6px 4px;font-weight:400;text-rendering:optimizeLegibility;font-feature-settings:"liga" 1,"calt" 1;-webkit-font-smoothing:antialiased;word-spacing:4px;unicode-bidi:isolate}
+.ar{font-kerning:normal}
+.part{border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.lbl{font-size:12px;color:var(--brand2);font-weight:600;margin-top:6px}
+.ml{font-size:var(--ml);line-height:1.85;margin:6px 0 0}
+.en{font-size:14px;line-height:1.6;color:var(--muted);margin:6px 0 0;font-family:system-ui,sans-serif}
+.note{font-size:12.5px;color:var(--brand2);margin-top:8px}
+.ref{font-size:11.5px;color:var(--muted);margin-top:6px;font-family:system-ui,sans-serif}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.actions button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 11px;font:inherit;font-size:13px;cursor:pointer}
+.actions button.on{color:var(--brand2);border-color:var(--brand2)}
+.actions .wa{background:#25d366;color:#fff;border-color:#25d366}
+footer{font-size:12px;color:var(--muted);text-align:center;padding:10px 16px 30px;line-height:1.7}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c2925;color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:9}
+.toast.show{opacity:1}
+.empty{text-align:center;color:var(--muted);padding:40px 0}
+header{transition:padding .2s ease}
+.srch-row input[type=search]{margin-top:10px;padding:9px 12px;font-size:14px}
+header.compact{padding-top:10px;padding-bottom:8px}
+header.compact .sub,
+header.compact .chips,
+header.compact .bar,
+header.compact .srch-row{display:none}
+header.compact.show-search .srch-row{display:block}
+header.compact.show-search .srch-row input{margin-top:8px}
+.icon-btn{font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <div>
+      <h1>ദൈനംദിന ദുആകൾ</h1>
+      <div class="sub">Daily Duas · عربي · മലയാളം · English</div>
+    </div>
+    <div class="tools">
+      <button class="icon-btn" id="srchBtn" aria-label="Search">🔍</button>
+      <button class="icon-btn" id="fsDown" aria-label="Smaller text">A−</button>
+      <button class="icon-btn" id="fsUp" aria-label="Larger text">A+</button>
+      <button class="icon-btn" id="theme" aria-label="Toggle theme">🌙</button>
+    </div>
+  </div>
+  <div class="srch-row"><input type="search" id="q" placeholder="തിരയുക · Search"></div>
+  <div class="chips" id="chips"></div>
+  <div class="bar">
+    <div class="seg" id="lang">
+      <button data-l="ml">മലയാളം</button>
+      <button data-l="en">English</button>
+      <button data-l="both">രണ്ടും</button>
+      <button data-l="ar">അറബി</button>
+    </div>
+    <button class="chip" id="favOnly">★ പ്രിയപ്പെട്ടവ</button>
+  </div>
+</header>
+<main>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</main>
+<footer>
+  അറബി വാചകങ്ങളും വിവർത്തനങ്ങളും വിശ്വസനീയ ഗ്രന്ഥങ്ങളുമായി ഒത്തുനോക്കുക. അർത്ഥം മനസ്സിലാക്കാനുള്ള സഹായം മാത്രമാണ് വിവർത്തനം.<br>
+  Please verify the Arabic text and translations against trusted sources before sharing widely.
+</footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const CATS=['എല്ലാം','ഉറക്കം','ശുചിമുറി','വുദു/പള്ളി','ഭക്ഷണം','യാത്ര','ദിക്ർ','സംരക്ഷണം','കുടുംബം','രോഗം','പ്രയാസം','മരണം','നമസ്കാരം','നോമ്പ്','മറ്റുള്ളവ'];
+
+const DUAS=[
+{id:1,c:'ഉറക്കം',t:'ഉറങ്ങുമ്പോൾ',te:'Upon going to sleep',p:[{ar:"اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا",ml:"അല്ലാഹുവേ, നിന്റെ നാമത്തിൽ ഞാൻ മരിക്കുന്നു, ജീവിക്കുന്നു.",en:"O Allah, in Your name I die and I live."}],r:"Sahih Muslim 4/2083 | Fateh Al Bari 11/113"},
+
+{id:2,c:'ഉറക്കം',t:'ഉറക്കമുണർന്നപ്പോൾ',te:'Wake up from sleep',p:[{ar:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",ml:"ഉറക്കമെന്ന മരണത്തിന് ശേഷം ഞങ്ങളെ ജീവിപ്പിച്ച അല്ലാഹുവിന് സർവ്വ സ്തുതിയും; അവങ്കലേക്കാണ് ഉയിർത്തെഴുന്നേൽപ്പ്.",en:"All praise be to Allah, who gave us life after death (sleep is a form of death) and to Him we will be raised and returned."}],r:"Sahih Muslim 4/2083 | Fateh Al Bari 11/113"},
+
+{id:3,c:'ശുചിമുറി',t:'ശുചിമുറിയിൽ പ്രവേശിക്കുമ്പോൾ',te:'Entering the toilet',p:[{ar:"بِسْمِ اللَّهِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ. അല്ലാഹുവേ, ദുഷ്ടരായ ആൺ-പെൺ പിശാചുക്കളിൽ (ജിന്നുകളിൽ) നിന്ന് ഞാൻ നിന്നോട് രക്ഷ തേടുന്നു.",en:"In the name of Allah. O Allah, I seek refuge in You from the male and female evil (jinn)."}],r:"Al Bukhari 1/45 | Sahih Muslim 1/283"},
+
+{id:4,c:'ശുചിമുറി',t:'ശുചിമുറിയിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ',te:'Leaving the toilet',p:[{ar:"غُفْرَانَكَ، الْحَمْدُ لِلَّهِ الَّذِي أَذْهَبَ عَنِّي الْأَذَى وَعَافَانِي",ml:"അല്ലാഹുവേ, നിന്റെ പൊറുപ്പ് ഞാൻ തേടുന്നു. എന്നിൽ നിന്ന് ഉപദ്രവം നീക്കി എനിക്ക് ആശ്വാസം നൽകിയ അല്ലാഹുവിന് സർവ്വ സ്തുതിയും.",en:"O Allah, I seek Your forgiveness and pardon. All praise be to Allah, who removed the difficulty from me and gave me ease (relief)."}],r:"Abu Dawood | Ibn Majah | At-Tirmidhi"},
+
+{id:5,c:'വുദു/പള്ളി',t:'വുദു തുടങ്ങുമ്പോൾ',te:'Start of wudu',p:[{ar:"بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",ml:"പരമകാരുണികനും കരുണാനിധിയുമായ അല്ലാഹുവിന്റെ നാമത്തിൽ.",en:"In the name of Allah, the Entirely Merciful, the Especially Merciful."}],r:"Abu Dawood | Ibn Majah | Imam Ahmed"},
+
+{id:6,c:'വുദു/പള്ളി',t:'വുദു പൂർത്തിയാക്കുമ്പോൾ',te:'Completion of wudu',p:[{ar:"أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",ml:"അല്ലാഹുവല്ലാതെ ആരാധനക്കർഹനായി മറ്റാരുമില്ലെന്നും, അവൻ ഏകനാണെന്നും, അവന് പങ്കുകാരില്ലെന്നും ഞാൻ സാക്ഷ്യം വഹിക്കുന്നു. മുഹമ്മദ് അവന്റെ അടിമയും ദൂതനുമാണെന്നും ഞാൻ സാക്ഷ്യം വഹിക്കുന്നു.",en:"I testify that there is no one worthy of worship besides Allah. He is alone and has no partner, and I testify that Muhammad is Allah's servant and messenger."}],r:"Sahih Muslim 1/209",n:"ദിക്ർ/തസ്ബീഹ് ദിവസം മുഴുവൻ ചൊല്ലാം"},
+
+{id:7,c:'വുദു/പള്ളി',t:'പള്ളിയിൽ പ്രവേശിക്കുമ്പോൾ',te:'Entering the masjid',p:[{ar:"بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَىٰ رَسُولِ اللَّهِ، اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ; അല്ലാഹുവിന്റെ ദൂതന്റെ മേൽ സമാധാനവും അനുഗ്രഹവും. അല്ലാഹുവേ, നിന്റെ കാരുണ്യത്തിന്റെ വാതിലുകൾ എനിക്കായി തുറക്കേണമേ.",en:"In the Name of Allah, and peace and blessings be upon the Messenger of Allah. O Allah, open the doors of Your mercy for me."}],r:"Abu Dawood | Ibn As Sunan 888 | Al Albani"},
+
+{id:8,c:'വുദു/പള്ളി',t:'പള്ളിയിൽ നിന്ന് പുറത്തിറങ്ങുമ്പോൾ',te:'Leaving the masjid',p:[{ar:"بِسْمِ اللَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَىٰ رَسُولِ اللَّهِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ; അല്ലാഹുവിന്റെ ദൂതന്റെ മേൽ സമാധാനവും അനുഗ്രഹവും. അല്ലാഹുവേ, നിന്റെ അനുഗ്രഹത്തിൽ നിന്ന് ഞാൻ നിന്നോട് ചോദിക്കുന്നു.",en:"In the Name of Allah, and peace and blessings be upon the Messenger of Allah. O Allah, I ask for Your favour; verily I seek from You Your bounty."}],r:"Abu Dawood | Sahee Al Jaami 4591"},
+
+{id:9,c:'ഭക്ഷണം',t:'ഭക്ഷണത്തിന് മുമ്പ്',te:'Before the meals',p:[{ar:"بِسْمِ اللَّهِ",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ.",en:"In the name of Allah."}],r:"Abu Dawood 3/437 | At-Tirmidhi 4/288",n:"തുടങ്ങുന്ന എല്ലാ കാര്യത്തിനും മുമ്പ് ചൊല്ലാം"},
+
+{id:10,c:'ഭക്ഷണം',t:'ബിസ്മി ചൊല്ലാൻ മറന്നാൽ',te:'Forgetting to recite Bismillah',p:[{ar:"بِسْمِ اللَّهِ فِي أَوَّلِهِ وَآخِرِهِ",ml:"തുടക്കത്തിലും ഒടുക്കത്തിലും അല്ലാഹുവിന്റെ നാമത്തിൽ.",en:"In the name of Allah in the beginning and end."}],r:"Abu Dawood 3/437 | At-Tirmidhi 4/288",n:"തുടങ്ങുന്ന എല്ലാ കാര്യത്തിനും മുമ്പ് ചൊല്ലാം"},
+
+{id:11,c:'ഭക്ഷണം',t:'ഭക്ഷണത്തിന് ശേഷം',te:'After meals',p:[
+  {l:"ദുആ 1",ar:"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",ml:"എനിക്ക് ഈ ആഹാരം നൽകുകയും, എന്റെ ശക്തിയോ കഴിവോ കൂടാതെ ഇത് ഉപജീവനമായി നൽകുകയും ചെയ്ത അല്ലാഹുവിന് സർവ്വ സ്തുതിയും.",en:"Praise is to Allah who has given me this food and sustained me with it, though I was unable to do it and powerless."},
+  {l:"ദുആ 2",ar:"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",ml:"ഞങ്ങൾക്ക് ആഹാരം നൽകുകയും, ദാഹം ശമിപ്പിക്കുകയും, ഞങ്ങളെ മുസ്ലിംകളാക്കുകയും ചെയ്ത അല്ലാഹുവിന് സർവ്വ സ്തുതിയും.",en:"All praise belongs to Allah, who fed us and quenched our thirst and made us Muslims."},
+  {l:"ദുആ 3",ar:"اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَأَطْعِمْنَا خَيْرًا مِنْهُ",ml:"അല്ലാഹുവേ, ഇതിൽ ഞങ്ങൾക്ക് അനുഗ്രഹം നൽകേണമേ; ഇതിനേക്കാൾ ഉത്തമമായത് ഞങ്ങൾക്ക് ആഹാരമായി നൽകേണമേ.",en:"O Allah, bless us in it and grant us better than it."}
+],r:"At-Tirmidhi 3/159 | Abu Dawud | Ibn Majah · Ibn Majah 3283 | Abi Dawud 3850 | At-Tirmidhi 3457 · At-Tirmidhi 5/506"},
+
+{id:12,c:'മരണം',t:'സലാം വീട്ടുന്നതിന് മുമ്പുള്ള പ്രാർത്ഥന',te:'Dua before salam',p:[{ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَمِنْ عَذَابِ جَهَنَّمَ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ",ml:"അല്ലാഹുവേ, ഖബ്റിലെ ശിക്ഷയിൽ നിന്നും നരകാഗ്നിയുടെ ശിക്ഷയിൽ നിന്നും, ജീവിതത്തിന്റെയും മരണത്തിന്റെയും പരീക്ഷകളിൽ നിന്നും, ദജ്ജാലിന്റെ പരീക്ഷയുടെ തിന്മയിൽ നിന്നും ഞാൻ നിന്നോട് രക്ഷ തേടുന്നു.",en:"O Allah, I seek refuge in You from the punishment of the grave, the punishment of Hell-fire, the trials of life and death, and the evil of the trial of the False Messiah."}],r:"Al-Bukhari 2/102 | Muslim 1/412",n:"തശ്ഹുദിലും സലാമിന് മുമ്പും ചൊല്ലാം"},
+
+{id:13,c:'യാത്ര',t:'വീട്ടിൽ നിന്ന് പുറപ്പെടുമ്പോൾ',te:'When leaving home',p:[{ar:"بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ ഞാൻ പുറപ്പെടുന്നു; അല്ലാഹുവിൽ ഞാൻ ഭരമേൽപ്പിക്കുന്നു. അല്ലാഹുവിന്റെ സഹായമില്ലാതെ പാപത്തിൽ നിന്ന് തിരിയാനോ നന്മ ചെയ്യാനോ ഒരു കഴിവുമില്ല.",en:"I depart with Allah's name, relying on Him. It is Allah who saves us from sins with His guidance (the ability to do so)."}],r:"Sahih Muslim 1/209",n:"കാർ, ബസ്, ട്രെയിൻ, വിമാനം തുടങ്ങി എന്തും വിടുമ്പോൾ ചൊല്ലാം"},
+
+{id:14,c:'യാത്ര',t:'വീട്ടിൽ പ്രവേശിക്കുമ്പോൾ',te:'When entering home',p:[{ar:"بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَىٰ رَبِّنَا تَوَكَّلْنَا",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ ഞങ്ങൾ പ്രവേശിക്കുന്നു; അല്ലാഹുവിന്റെ നാമത്തിൽ ഞങ്ങൾ പുറത്തിറങ്ങുന്നു; ഞങ്ങളുടെ രക്ഷിതാവിൽ ഞങ്ങൾ ഭരമേൽപ്പിക്കുന്നു.",en:"In the Name of Allah we enter, in the Name of Allah we leave, and upon our Lord we depend."}],r:"At-Tirmidhi 5/490 | Abu Dawood 4/325",n:"പിന്നീട് അസ്സലാമു അലൈക്കും എന്ന് സലാം പറയുക"},
+
+{id:15,c:'യാത്ര',t:'യാത്രയിൽ',te:'On journey',p:[{ar:"سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَىٰ رَبِّنَا لَمُنْقَلِبُونَ",ml:"ഇതിനെ ഞങ്ങൾക്ക് വശപ്പെടുത്തിത്തന്ന അല്ലാഹു എത്ര പരിശുദ്ധൻ! ഇതിനെ വശമാക്കാൻ ഞങ്ങൾക്ക് കഴിവില്ലായിരുന്നു. നിശ്ചയമായും ഞങ്ങൾ ഞങ്ങളുടെ രക്ഷിതാവിങ്കലേക്ക് മടങ്ങുന്നവരാണ്.",en:"Allah is pure, He has given us control of this, and without His power we would not have any control over it. Without doubt we are to return to Him."}],r:"Abu Dawood 3/34 | At-Tirmidhi 5/501 | 3/156",n:"ഏത് യാത്രയിലും ചൊല്ലാം"},
+
+{id:16,c:'യാത്ര',t:'യാത്ര കഴിഞ്ഞ് മടങ്ങുമ്പോൾ',te:'Return from journey',p:[{ar:"سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَىٰ رَبِّنَا لَمُنْقَلِبُونَ، آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ",ml:"ഇതിനെ ഞങ്ങൾക്ക് വശപ്പെടുത്തിത്തന്ന അല്ലാഹു എത്ര പരിശുദ്ധൻ! ഇതിനെ വശമാക്കാൻ ഞങ്ങൾക്ക് കഴിവില്ലായിരുന്നു. നിശ്ചയമായും ഞങ്ങൾ ഞങ്ങളുടെ രക്ഷിതാവിങ്കലേക്ക് മടങ്ങുന്നവരാണ്. ഞങ്ങൾ മടങ്ങുന്നു, പശ്ചാത്തപിക്കുന്നു, ആരാധിക്കുന്നു, ഞങ്ങളുടെ രക്ഷിതാവിനെ സ്തുതിക്കുന്നു.",en:"Allah is pure, He has given us control of this, and without His power we would not have any control over it. Without doubt we are to return to Him. We return, repent, worship and praise our Lord."}],r:"Abu Dawood 3/34 | At-Tirmidhi 5/501 | 3/156"},
+
+{id:17,c:'മറ്റുള്ളവ',t:'തുമ്മുമ്പോൾ',te:'When sneezing',p:[{ar:"الْحَمْدُ لِلَّهِ",ml:"അല്ലാഹുവിന് സർവ്വ സ്തുതിയും.",en:"All praise is for Allah."}],r:"Al Bukhari 7/125",n:"എല്ലാ പ്രവർത്തനങ്ങളിലും അല്ലാഹുവിന് നന്ദി പറയാൻ ചൊല്ലാം"},
+
+{id:18,c:'മറ്റുള്ളവ',t:'മറ്റൊരാൾ തുമ്മുമ്പോൾ',te:'Hearing someone sneeze',p:[{ar:"يَرْحَمُكَ اللَّهُ",ml:"അല്ലാഹു നിങ്ങളോട് കരുണ കാണിക്കട്ടെ.",en:"May Allah have mercy on you."}],r:"Al Bukhari 7/125"},
+
+{id:19,c:'മറ്റുള്ളവ',t:'തുമ്മിയ ആൾക്കുള്ള മറുപടി',te:'Sneezer replies back',p:[{ar:"يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ",ml:"അല്ലാഹു നിങ്ങളെ സന്മാർഗത്തിലാക്കുകയും നിങ്ങളുടെ അവസ്ഥ നന്നാക്കുകയും ചെയ്യട്ടെ.",en:"May Allah guide you and rectify your condition."}],r:"Al Bukhari 7/125"},
+
+{id:20,c:'സംരക്ഷണം',t:'ചന്തയിൽ (അങ്ങാടിയിൽ) പ്രവേശിക്കുമ്പോൾ',te:'Entering the market',p:[{ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",ml:"അല്ലാഹുവല്ലാതെ ആരാധ്യനില്ല; അവൻ ഏകനാണ്, അവന് പങ്കുകാരില്ല. ആധിപത്യവും സ്തുതിയും അവനുള്ളത്. അവൻ ജീവിപ്പിക്കുന്നു, മരിപ്പിക്കുന്നു; അവൻ ജീവിക്കുന്നവനാണ്, ഒരിക്കലും മരിക്കാത്തവനാണ്. എല്ലാ നന്മയും അവന്റെ കയ്യിലാണ്; അവൻ എല്ലാത്തിനും കഴിവുള്ളവനാണ്.",en:"None has the right to be worshipped except Allah, alone, without partner. To Him belongs all sovereignty and praise. He gives life and causes death, and He is living and does not die. In His hand is all good, and He is over all things, omnipotent."}],r:"At-Tirmidhi 5/291 | Al Hakim 1/538 | Ibn Majah 2/21"},
+
+{id:21,c:'കുടുംബം',t:'ഭാര്യയുമായി ബന്ധപ്പെടുമ്പോൾ',te:'Having relation with wife',p:[{ar:"بِسْمِ اللَّهِ، اللَّهُمَّ جَنِّبْنَا الشَّيْطَانَ، وَجَنِّبِ الشَّيْطَانَ مَا رَزَقْتَنَا",ml:"അല്ലാഹുവിന്റെ നാമത്തിൽ. അല്ലാഹുവേ, പിശാചിൽ നിന്ന് ഞങ്ങളെ അകറ്റേണമേ; നീ ഞങ്ങൾക്ക് നൽകുന്നതിൽ നിന്ന് പിശാചിനെയും അകറ്റേണമേ. അല്ലാഹു ഒരു കുട്ടിയെ വിധിച്ചാൽ പിശാച് അവനെ ഒരിക്കലും ഉപദ്രവിക്കുകയില്ല.",en:"In the Name of Allah, O Allah! Keep us away from Satan and keep Satan away from what You have bestowed upon us. And if Allah has ordained a child for them, Satan will never harm him."}],r:"Abu Dawood 2/248 | Ibn Majah 1/617"},
+
+{id:22,c:'നമസ്കാരം',t:'ബാങ്ക് വിളിക്ക് ശേഷം',te:'After adhaan',p:[{ar:"اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ، إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ",ml:"ഈ പരിപൂർണ്ണ വിളിയുടെയും സ്ഥാപിക്കപ്പെടുന്ന നമസ്കാരത്തിന്റെയും രക്ഷിതാവായ അല്ലാഹുവേ, മുഹമ്മദ് നബിക്ക് വസീല (സ്വർഗത്തിലെ ഉന്നത സ്ഥാനം) യും ഫദീല (സൃഷ്ടികൾക്കിടയിലെ ഉന്നത പദവി) യും നൽകേണമേ; നീ വാഗ്ദാനം ചെയ്ത പ്രശംസനീയമായ സ്ഥാനത്ത് അദ്ദേഹത്തെ എഴുന്നേൽപ്പിക്കേണമേ. നിശ്ചയമായും നീ വാഗ്ദാനം ലംഘിക്കുന്നവനല്ല.",en:"O Allah, Lord of this perfect call and this prayer to be established, grant Muhammad al-Wasilah (a high and special place in Jannah) and al-Fadheelah (a rank above the rest of creation), and raise him to a praised platform which You have promised him. Verily, You never break Your promise."}],r:"Al Bukhari 1/152"},
+
+{id:23,c:'മരണം',t:'ജനാസ നമസ്കാരത്തിലെ പ്രാർത്ഥന',te:'Dua for janaza',p:[{ar:"اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا، وَشَاهِدِنَا وَغَائِبِنَا، وَصَغِيرِنَا وَكَبِيرِنَا، وَذَكَرِنَا وَأُنْثَانَا، اللَّهُمَّ مَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى الْإِسْلَامِ، وَمَنْ تَوَفَّيْتَهُ مِنَّا فَتَوَفَّهُ عَلَى الْإِيمَانِ، اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ، وَلَا تُضِلَّنَا بَعْدَهُ",ml:"അല്ലാഹുവേ, ഞങ്ങളിൽ ജീവിച്ചിരിക്കുന്നവർക്കും മരിച്ചവർക്കും, സന്നിഹിതരായവർക്കും അസാന്നിധ്യമുള്ളവർക്കും, ചെറിയവർക്കും വലിയവർക്കും, പുരുഷന്മാർക്കും സ്ത്രീകൾക്കും പൊറുക്കേണമേ. അല്ലാഹുവേ, ഞങ്ങളിൽ നീ ജീവിപ്പിക്കുന്നവനെ ഇസ്ലാമിൽ ജീവിപ്പിക്കേണമേ; ഞങ്ങളിൽ നീ മരിപ്പിക്കുന്നവനെ ഈമാനോടെ മരിപ്പിക്കേണമേ. അല്ലാഹുവേ, അദ്ദേഹത്തിന്റെ പ്രതിഫലം ഞങ്ങൾക്ക് നിഷേധിക്കരുതേ; അദ്ദേഹത്തിന് ശേഷം ഞങ്ങളെ വഴിതെറ്റിക്കരുതേ.",en:"O Allah, forgive our living and our dead, those present and those absent, our young and our old, our males and our females. O Allah, whom amongst us You keep alive, then let such a life be upon Islam, and whom amongst us You take unto Yourself, then let such a death be upon faith. O Allah, do not deprive us of his reward and do not let us stray after him."}],r:"Ibn Majah 1/480 | Imam Ahmed 2/268"},
+
+{id:24,c:'ദിക്ർ',t:'സുബ്ഹാനല്ലാഹി വബിഹംദിഹി',te:'Glorification of Allah',p:[{ar:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ",ml:"അല്ലാഹു എത്ര പരിശുദ്ധൻ; ഞാൻ അവനെ സ്തുതിക്കുന്നു. മഹാനായ അല്ലാഹു എത്ര പരിശുദ്ധൻ.",en:"How perfect Allah is and I praise Him. How perfect Allah is, the Supreme."}],r:"Al Bukhari 4/2071",n:"ഹൃദയം (ഖൽബ്) ശുദ്ധമാക്കാൻ എപ്പോഴും ചൊല്ലുക"},
+
+{id:25,c:'ദിക്ർ',t:'അല്ലാഹുവേ, നീ മാപ്പ് നൽകുന്നവനാണ്',te:'O Allah, You are the Pardoner',p:[{ar:"اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",ml:"അല്ലാഹുവേ, നീ വളരെ മാപ്പ് നൽകുന്നവനാണ്; മാപ്പ് നൽകുന്നത് നിനക്ക് ഇഷ്ടമാണ്. അതിനാൽ എനിക്ക് മാപ്പ് നൽകേണമേ.",en:"O Allah, You are the One who pardons greatly and loves to pardon, so pardon me."}],r:"At-Tirmidhi 9/201 | 1195",n:"റമദാനിലെ ദുആയായും, ദിക്ർ/തസ്ബീഹ് സമയത്തും ചൊല്ലാം"},
+
+{id:26,c:'ദിക്ർ',t:'ലാ ഹൗല വലാ ഖുവ്വത',te:'No might nor power',p:[{ar:"لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",ml:"അല്ലാഹുവിന്റെ സഹായമല്ലാതെ യാതൊരു ശക്തിയും കഴിവും ഇല്ല.",en:"There is no might nor power except with Allah."}],r:"Al Bukhari | Sahih Muslim 4/2076",n:"ദിക്ർ/തസ്ബീഹ് ദിവസം മുഴുവൻ"},
+
+{id:27,c:'ദിക്ർ',t:'സുബ്ഹാനല്ലാഹ്, അൽഹംദുലില്ലാഹ്…',te:'Glorification (four phrases)',p:[{ar:"سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ",ml:"അല്ലാഹു പരിശുദ്ധൻ; അല്ലാഹുവിന് സർവ്വ സ്തുതിയും; അല്ലാഹുവല്ലാതെ ആരാധ്യനില്ല; അല്ലാഹു ഏറ്റവും വലിയവൻ.",en:"Glory be to Allah, all praise is for Allah, there is no god but Allah, and Allah is the Greatest."}],r:"Sahih Muslim 3/1685 | 4/2072",n:"ഹൃദയം (ഖൽബ്) ശുദ്ധമാക്കാൻ എപ്പോഴും ചൊല്ലുക"},
+
+{id:28,c:'പ്രയാസം',t:'പ്രയാസത്തിലായപ്പോൾ (യൂനുസ് നബിയുടെ ദുആ)',te:'One in distress',p:[{ar:"لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ، إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",ml:"നീയല്ലാതെ ആരാധ്യനില്ല; നീ പരിശുദ്ധനാണ്. നിശ്ചയമായും ഞാൻ അക്രമികളിൽ പെട്ടവനായിരുന്നു.",en:"None has the right to be worshipped except You. How perfect You are, verily I was among the wrong-doers."}],r:"Sura Al-Anbiya 21:87",n:"ദിക്ർ/തസ്ബീഹ് ദിവസം മുഴുവൻ"},
+
+{id:29,c:'പ്രയാസം',t:'കാര്യങ്ങൾ അല്ലാഹുവിൽ ഏൽപ്പിക്കുമ്പോൾ',te:'Leaving all affairs to Allah',p:[{ar:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",ml:"അല്ലാഹു ഞങ്ങൾക്ക് മതി; അവൻ ഏറ്റവും നല്ല കാര്യവിചാരകനാണ്.",en:"Allah (alone) is sufficient for us, and He is the Best Disposer of affairs."}],r:"Quran 3:173 | Al Bukhari 5/172",n:"ദിക്ർ/തസ്ബീഹ് ദിവസം മുഴുവൻ"},
+
+{id:30,c:'സംരക്ഷണം',t:'നരകാഗ്നിയിൽ നിന്നുള്ള രക്ഷ',te:'Protection from Hellfire',p:[{ar:"اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ",ml:"അല്ലാഹുവേ, നരകാഗ്നിയിൽ നിന്ന് എന്നെ രക്ഷിക്കേണമേ.",en:"O Allah, save me from the fire."}],r:"Abu Dawood 5079",n:"ദുആ, സുജൂദ്, റുകൂഅ്, തശ്ഹുദ്, ഫജ്ർ, മഗ്‌രിബ് എന്നിവയിൽ ചൊല്ലാം"},
+
+{id:31,c:'സംരക്ഷണം',t:'ശിർക്കിനെ ഭയക്കുമ്പോൾ',te:'Fear of shirk',p:[{ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ شَيْئًا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",ml:"അല്ലാഹുവേ, അറിഞ്ഞുകൊണ്ട് നിന്നോട് യാതൊന്നിനെയും പങ്കുചേർക്കുന്നതിൽ നിന്ന് ഞാൻ നിന്നോട് രക്ഷ തേടുന്നു; അറിയാതെ ചെയ്തതിന് നിന്നോട് ഞാൻ പൊറുപ്പ് തേടുന്നു.",en:"O Allah, we seek refuge in You from associating anything with You knowingly, and we seek Your forgiveness for what we do unknowingly."}],r:"Imam Ahmed 4/403",n:"ദുആ, തശ്ഹുദ്, ദിക്ർ എന്നിവയിൽ ചൊല്ലാം"},
+
+{id:32,c:'കുടുംബം',t:'കുട്ടികൾക്ക് അല്ലാഹുവിന്റെ സംരക്ഷണം',te:'Placing children under Allah’s protection',p:[{ar:"أُعِيذُكُمَا بِكَلِمَاتِ اللَّهِ التَّامَّةِ، مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لَامَّةٍ",ml:"അല്ലാഹുവിന്റെ പരിപൂർണ്ണ വചനങ്ങളാൽ, എല്ലാ പിശാചിൽ നിന്നും വിഷജന്തുക്കളിൽ നിന്നും ദൃഷ്ടിദോഷത്തിൽ നിന്നും ഞാൻ നിങ്ങൾക്ക് സംരക്ഷണം തേടുന്നു.",en:"I seek protection for you in the Perfect Words of Allah from every devil and every beast, and from every envious, blameworthy eye."}],r:"Al Bukhari 4/119",n:"കുട്ടികൾക്കായി, റുഖിയ്യയായും ചൊല്ലാം"},
+
+{id:33,c:'കുടുംബം',t:'മാതാപിതാക്കൾക്കുള്ള പ്രാർത്ഥന',te:'Dua for the parents',p:[{ar:"رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",ml:"ഞങ്ങളുടെ രക്ഷിതാവേ, കണക്ക് സ്ഥാപിതമാകുന്ന ദിവസം എനിക്കും മാതാപിതാക്കൾക്കും വിശ്വാസികൾക്കും പൊറുക്കേണമേ.",en:"Our Lord! Forgive me and my parents, and (all) the believers on the Day when the reckoning will be established. (Quran 14:41)"},{ar:"رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",ml:"എന്റെ രക്ഷിതാവേ, ചെറുപ്പത്തിൽ അവർ എന്നെ വളർത്തിയതുപോലെ അവരോട് കരുണ കാണിക്കേണമേ.",en:"My Lord! Have mercy on them both as they did care for me when I was young. (Quran 17:24)"}],r:"Quran 14:41 | 17:24",n:"ദുആ, തശ്ഹുദ് എന്നിവയിൽ ചൊല്ലാം"},
+
+{id:34,c:'നോമ്പ്',t:'നോമ്പ് തുറക്കുമ്പോൾ',te:'When breaking fast',p:[{ar:"ذَهَبَ الظَّمَأُ، وَابْتَلَّتِ الْعُرُوقُ، وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",ml:"ദാഹം ശമിച്ചു, ഞരമ്പുകൾ നനഞ്ഞു, അല്ലാഹുവിന്റെ ഇഷ്ടത്താൽ പ്രതിഫലം ഉറപ്പായി.",en:"The thirst has quenched and the veins are moistened, and with the will of Allah, the reward is established."}],r:"Abu Dawood 2/306 | Al Albani | Sahih Al Jami | As Saghir 4/209"},
+
+{id:35,c:'രോഗം',t:'രോഗിയെ സന്ദർശിക്കുമ്പോൾ',te:'When visiting the sick',p:[{ar:"لَا بَأْسَ، طَهُورٌ إِنْ شَاءَ اللَّهُ",ml:"പേടിക്കേണ്ട; അല്ലാഹുവിന്റെ ഇഷ്ടമുണ്ടെങ്കിൽ ഇത് (നിങ്ങൾക്ക്) പാപശുദ്ധീകരണമാകും.",en:"Do not worry, it will be a purification (for you), Allah willing."}],r:"Al Bukhari | Al Asqalani Fath Al Bari 10/118"},
+
+{id:36,c:'രോഗം',t:'നല്ല ആരോഗ്യത്തിന്',te:'For good health',p:[{ar:"أَسْأَلُ اللَّهَ الْعَظِيمَ، رَبَّ الْعَرْشِ الْعَظِيمِ، أَنْ يَشْفِيَكَ",ml:"മഹത്തായ സിംഹാസനത്തിന്റെ രക്ഷിതാവായ മഹാനായ അല്ലാഹുവിനോട് നിങ്ങൾക്ക് സൗഖ്യം നൽകാൻ ഞാൻ ചോദിക്കുന്നു.",en:"I ask Almighty Allah, Lord of the Magnificent Throne, to make you well."}],r:"At-Tirmidhi 2/210 | Abu Dawood | Al Albani | Sahih Al Jami | As Saghir 5/180",n:"7 തവണ ചൊല്ലുക"},
+
+{id:37,c:'രോഗം',t:'ഏത് രോഗത്തിനും സൗഖ്യത്തിന്',te:'Cure of any illness',p:[{ar:"أَذْهِبِ الْبَأْسَ رَبَّ النَّاسِ، وَاشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا",ml:"മനുഷ്യരുടെ രക്ഷിതാവേ, ഈ വേദന നീക്കേണമേ; സൗഖ്യം നൽകേണമേ. നീയാണ് സൗഖ്യദായകൻ; നിന്റെ സൗഖ്യമല്ലാതെ മറ്റൊരു സൗഖ്യവുമില്ല. ഒരു രോഗവും ശേഷിക്കാത്ത സൗഖ്യം നൽകേണമേ.",en:"O Lord of the people, remove this pain and cure it. You are the One who cures, and there is no cure but Your cure, a cure that leaves no illness behind."}],r:"Al Bukhari | Sahih Muslim",n:"ദുആ, തശ്ഹുദ് എന്നിവയിലും ചൊല്ലാം"},
+
+{id:38,c:'മരണം',t:'ഖബറിടം സന്ദർശിക്കുമ്പോൾ',te:'Visiting the graves',p:[{ar:"السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ، وَإِنَّا إِنْ شَاءَ اللَّهُ بِكُمْ لَاحِقُونَ، نَسْأَلُ اللَّهَ لَنَا وَلَكُمُ الْعَافِيَةَ",ml:"ഈ വീടുകളിലെ (ഖബറുകളിലെ) വിശ്വാസികളും മുസ്ലിംകളുമായ ജനങ്ങളേ, നിങ്ങൾക്ക് സമാധാനം. അല്ലാഹു ഇച്ഛിച്ചാൽ ഞങ്ങളും നിങ്ങളോട് ചേരുന്നവരാണ്. ഞങ്ങൾക്കും നിങ്ങൾക്കും അല്ലാഹുവിനോട് ആരോഗ്യവും രക്ഷയും ചോദിക്കുന്നു.",en:"Peace be upon you, people of this abode, from among the believers and those who are Muslims, and we, by the Will of Allah, shall be joining you. I ask Allah to grant us and you well-being."}],r:"Sahih Muslim 2/671 | Ibn Majah 1/494"},
+
+{id:39,c:'പ്രയാസം',t:'എല്ലാ പ്രയാസകരമായ കാര്യങ്ങൾക്കും',te:'Any difficult affairs',p:[{ar:"اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",ml:"അല്ലാഹുവേ, നീ എളുപ്പമാക്കിയതല്ലാതെ മറ്റൊന്നും എളുപ്പമല്ല; നീ ഇച്ഛിച്ചാൽ പ്രയാസത്തെയും എളുപ്പമാക്കുന്നു.",en:"O Allah, there is no ease except in that which You have made easy, and You make the difficulty, if You wish, easy."}],r:"Mishkat | Ibn Hibban 327 | Ibn As Sunni 351",n:"പരീക്ഷകൾ, എല്ലാ പ്രയാസകരമായ കാര്യങ്ങളിലും ചൊല്ലാം"},
+
+{id:40,c:'നമസ്കാരം',t:'ഇസ്തിഖാറ നമസ്കാരം',te:'Salatul Istikhara',p:[
+  {ar:"اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ الْعَظِيمِ، فَإِنَّكَ تَقْدِرُ وَلَا أَقْدِرُ، وَتَعْلَمُ وَلَا أَعْلَمُ، وَأَنْتَ عَلَّامُ الْغُيُوبِ",ml:"അല്ലാഹുവേ, നിന്റെ അറിവിനാൽ ഞാൻ നിന്നോട് മാർഗദർശനം തേടുന്നു; നിന്റെ കഴിവിനാൽ ശക്തി തേടുന്നു; നിന്റെ മഹത്തായ അനുഗ്രഹത്തിൽ നിന്ന് ഞാൻ ചോദിക്കുന്നു. നീ കഴിവുള്ളവനാണ്, ഞാൻ കഴിവില്ലാത്തവനാണ്; നീ അറിയുന്നു, ഞാൻ അറിയുന്നില്ല; നീയാണ് അദൃശ്യകാര്യങ്ങളുടെ അറിവുള്ളവൻ.",en:"O Allah, I seek Your guidance by virtue of Your knowledge, and I seek ability by virtue of Your power, and I ask You of Your great bounty. You have power, I have none. You know, I know not. You are the Knower of hidden things."},
+  {l:"ഇവിടെ കാര്യത്തിന്റെ പേര് പറയുക",ar:"اللَّهُمَّ إِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الْأَمْرَ خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثُمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الْأَمْرَ شَرٌّ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي فَاصْرِفْهُ عَنِّي وَاصْرِفْنِي عَنْهُ، وَاقْدُرْ لِيَ الْخَيْرَ حَيْثُ كَانَ ثُمَّ أَرْضِنِي بِهِ",ml:"അല്ലാഹുവേ, ഈ കാര്യം (കാര്യത്തിന്റെ പേര് പറയുക) എന്റെ മതത്തിനും ജീവിതോപാധിക്കും കാര്യങ്ങളുടെ പരിണതിക്കും നല്ലതാണെന്ന് നീ അറിയുന്നുവെങ്കിൽ, അത് എനിക്ക് വിധിക്കുകയും എളുപ്പമാക്കുകയും അതിൽ അനുഗ്രഹം നൽകുകയും ചെയ്യേണമേ. ഇത് എന്റെ മതത്തിനും ജീവിതോപാധിക്കും കാര്യങ്ങളുടെ പരിണതിക്കും ദോഷകരമാണെന്ന് നീ അറിയുന്നുവെങ്കിൽ, അത് എന്നിൽ നിന്ന് അകറ്റുകയും എന്നെ അതിൽ നിന്ന് അകറ്റുകയും ചെയ്യേണമേ. എവിടെയായിരുന്നാലും നന്മ എനിക്ക് വിധിക്കേണമേ, അതിൽ എന്നെ തൃപ്തനാക്കേണമേ.",en:"O Allah, if in Your knowledge this matter (name it) is good for me in my religion, my livelihood and the outcome of my affairs, then ordain it for me, make it easy for me, and bless it for me. And if in Your knowledge this matter is bad for me in my religion, my livelihood and the outcome of my affairs, then turn it away from me and turn me away from it, ordain for me the good wherever it may be, and make me pleased with it."}
+],r:"Al Bukhari 7/162"},
+
+{id:41,c:'നമസ്കാരം',t:'ഖുനൂത്ത് ദുആ',te:'Dua Qunoot',p:[
+  {l:"ഖുനൂത്ത് 1",ar:"اللَّهُمَّ اهْدِنَا فِيمَنْ هَدَيْتَ، وَعَافِنَا فِيمَنْ عَافَيْتَ، وَتَوَلَّنَا فِيمَنْ تَوَلَّيْتَ، وَبَارِكْ لَنَا فِيمَا أَعْطَيْتَ، وَقِنَا شَرَّ مَا قَضَيْتَ، إِنَّكَ تَقْضِي وَلَا يُقْضَى عَلَيْكَ، إِنَّهُ لَا يَذِلُّ مَنْ وَالَيْتَ، وَلَا يَعِزُّ مَنْ عَادَيْتَ، تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ",ml:"അല്ലാഹുവേ, നീ സന്മാർഗം നൽകിയവരുടെ കൂട്ടത്തിൽ ഞങ്ങൾക്കും സന്മാർഗം നൽകേണമേ; നീ സൗഖ്യം നൽകിയവരുടെ കൂട്ടത്തിൽ ഞങ്ങൾക്കും സൗഖ്യം നൽകേണമേ; നീ ഭരമേൽപ്പിച്ചവരുടെ കൂട്ടത്തിൽ ഞങ്ങളെയും ഭരമേൽപ്പിക്കേണമേ; നീ നൽകിയതിൽ ഞങ്ങൾക്ക് അനുഗ്രഹം നൽകേണമേ; നീ വിധിച്ച തിന്മയിൽ നിന്ന് ഞങ്ങളെ കാത്തുകൊള്ളേണമേ. നിശ്ചയമായും നീ വിധിക്കുന്നു; നിനക്കെതിരെ ആർക്കും വിധിക്കാനാവില്ല. നീ ആരെ സംരക്ഷിക്കുന്നുവോ അവൻ നിന്ദിതനാവില്ല; നീ ശത്രുവാക്കിയവൻ ആദരിക്കപ്പെടുകയുമില്ല. ഞങ്ങളുടെ രക്ഷിതാവേ, നീ അനുഗ്രഹപൂർണനും ഉന്നതനുമാണ്.",en:"O Allah, guide us among those whom You have guided, pardon us among those whom You have pardoned, turn to us in friendship among those on whom You have turned in friendship, and bless us in what You have bestowed, and save us from the evil of what You have decreed. For verily You decree and none can decree against You; he whom You befriend is not humiliated, and he who is Your enemy is not honoured. Blessed are You, our Lord, and Exalted."},
+  {l:"ഖുനൂത്ത് 2",ar:"اللَّهُمَّ إِنَّا نَسْتَعِينُكَ، وَنَسْتَغْفِرُكَ، وَنُؤْمِنُ بِكَ، وَنَتَوَكَّلُ عَلَيْكَ، وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَنَشْكُرُكَ، وَلَا نَكْفُرُكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ، اللَّهُمَّ إِيَّاكَ نَعْبُدُ، وَلَكَ نُصَلِّي وَنَسْجُدُ، وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، وَنَرْجُو رَحْمَتَكَ، وَنَخْشَى عَذَابَكَ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحَقٌ",ml:"അല്ലാഹുവേ, ഞങ്ങൾ നിന്നോട് സഹായം തേടുന്നു, നിന്നോട് പൊറുപ്പ് ചോദിക്കുന്നു, നിന്നിൽ വിശ്വസിക്കുന്നു, നിന്നിൽ ഭരമേൽപ്പിക്കുന്നു; എല്ലാ നന്മകൾക്കും നിന്നെ പുകഴ്ത്തുന്നു, നിനക്ക് നന്ദി ചെയ്യുന്നു, നിന്നെ നിഷേധിക്കുന്നില്ല; നിന്നെ ധിക്കരിക്കുന്നവരെ ഞങ്ങൾ വെടിയുന്നു, ഉപേക്ഷിക്കുന്നു. അല്ലാഹുവേ, നിന്നെ മാത്രം ഞങ്ങൾ ആരാധിക്കുന്നു; നിനക്കുവേണ്ടി നമസ്കരിക്കുകയും സാഷ്ടാംഗം ചെയ്യുകയും ചെയ്യുന്നു; നിന്നിലേക്ക് ഞങ്ങൾ പരിശ്രമിക്കുന്നു, ധൃതിപ്പെടുന്നു; നിന്റെ കാരുണ്യം പ്രതീക്ഷിക്കുന്നു, നിന്റെ ശിക്ഷയെ ഭയക്കുന്നു. നിശ്ചയമായും നിന്റെ ശിക്ഷ സത്യനിഷേധികൾക്ക് തീർച്ചയായും എത്തുന്നതാണ്.",en:"O Allah, we seek Your help and ask Your forgiveness, we believe in You and put our trust in You, and we praise You for all good. We thank You and are not ungrateful to You. We cast off and abandon whoever disobeys You. O Allah, You alone do we worship, and for You we pray and prostrate; to You we hasten and strive. We hope for Your mercy and fear Your punishment, for Your punishment will surely overtake the disbelievers."}
+],r:"Qunoot 1: Abu Dawood 1425 | At-Tirmidhi 464 | An-Nasa’i 1746 · Qunoot 2: Al-Bayhaqi 2/210",n:"വിത്ർ നമസ്കാരത്തിലും ദുആയായും ചൊല്ലാം"}
+];
+
+let st={cat:'എല്ലാം',q:'',lang:'ml',fav:false,fs:26,theme:'light'};
+let favs=[], counts={};
+try{
+  Object.assign(st, JSON.parse(localStorage.getItem('dd-prefs')||'{}'));
+  favs=JSON.parse(localStorage.getItem('dd-favs')||'[]');
+  counts=JSON.parse(localStorage.getItem('dd-counts')||'{}');
+}catch(_){}
+
+const $=s=>document.querySelector(s);
+const saveJSON=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(_){}};
+
+function applyPrefs(){
+  document.documentElement.style.setProperty('--ar', st.fs+'px');
+  document.documentElement.dataset.theme = st.theme;
+  $('#theme').textContent = st.theme==='dark' ? '☀️' : '🌙';
+  saveJSON('dd-prefs',{lang:st.lang,fs:st.fs,theme:st.theme});
+  render();
+}
+
+function visible(){
+  const q=st.q.trim().toLowerCase();
+  return DUAS.filter(d =>
+    (st.cat==='എല്ലാം' || d.c===st.cat) &&
+    (!st.fav || favs.includes(d.id)) &&
+    (!q || [d.t,d.te,d.r,d.n||'',...d.p.map(x=>(x.ml||'')+' '+(x.en||'')+' '+x.ar)].join(' ').toLowerCase().includes(q))
+  );
+}
+
+function card(d){
+  const fav=favs.includes(d.id), n=counts[d.id]||0;
+  const showML=st.lang==='ml'||st.lang==='both';
+  const showEN=st.lang==='en'||st.lang==='both';
+  const parts=d.p.map((x,i)=>`
+    <div class="${i?'part':''}">
+      ${x.l?`<div class="lbl">${x.l}</div>`:''}
+      <div class="ar" lang="ar">${x.ar}</div>
+      ${showML&&x.ml?`<p class="ml">${x.ml}</p>`:''}
+      ${showEN&&x.en?`<p class="en">${x.en}</p>`:''}
+    </div>`).join('');
+  return `<article class="card">
+    <div class="head">
+      <div class="num">${d.id}</div>
+      <div class="ttl">${d.t}<small>${d.te}</small></div>
+    </div>
+    ${parts}
+    ${d.n?`<div class="note">${d.n}</div>`:''}
+    <div class="ref">${d.r}</div>
+    <div class="actions">
+      <button class="${fav?'on':''}" data-a="fav" data-id="${d.id}">${fav?'★':'☆'} പ്രിയം</button>
+      <button data-a="inc" data-id="${d.id}">+1 · ${n}</button>
+      ${n?`<button data-a="reset" data-id="${d.id}">↺</button>`:''}
+      <button data-a="copy" data-id="${d.id}">പകർത്തുക</button>
+      <button class="wa" data-a="wa" data-id="${d.id}">WhatsApp</button>
+    </div>
+  </article>`;
+}
+
+function renderChips(){
+  $('#chips').innerHTML=CATS.map(c=>`<button class="chip ${c===st.cat?'on':''}" data-c="${c}">${c}</button>`).join('');
+}
+
+function render(){
+  const list=visible();
+  $('#count').textContent=`${list.length} / ${DUAS.length} ദുആകൾ`;
+  $('#list').innerHTML = list.length ? list.map(card).join('') : `<div class="empty">ഒന്നും കണ്ടെത്തിയില്ല · No results</div>`;
+  document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('on', b.dataset.l===st.lang));
+  $('#favOnly').classList.toggle('on', st.fav);
+  renderChips();
+}
+
+function plain(d, forWA){
+  const b = forWA ? '*' : '';
+  const body = d.p.map(x=>`${x.l?x.l+':\n':''}${x.ar}\n${x.ml||''}`).join('\n\n');
+  return `${b}${d.t}${b}\n\n${body}\n\n(${d.r})\n\n— ദൈനംദിന ദുആകൾ`;
+}
+
+async function copyText(t){
+  try{ await navigator.clipboard.writeText(t); }
+  catch(_){
+    const ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove();
+  }
+}
+
+let tt;
+function toast(m){
+  const el=$('#toast'); el.textContent=m; el.classList.add('show');
+  clearTimeout(tt); tt=setTimeout(()=>el.classList.remove('show'),1600);
+}
+
+$('#chips').onclick=e=>{const b=e.target.closest('[data-c]'); if(!b)return; st.cat=b.dataset.c; render();};
+$('#lang').onclick=e=>{const b=e.target.closest('[data-l]'); if(!b)return; st.lang=b.dataset.l; applyPrefs();};
+$('#q').oninput=e=>{st.q=e.target.value; render();};
+$('#favOnly').onclick=()=>{st.fav=!st.fav; render();};
+$('#fsUp').onclick=()=>{st.fs=Math.min(40,st.fs+2); applyPrefs();};
+$('#fsDown').onclick=()=>{st.fs=Math.max(18,st.fs-2); applyPrefs();};
+$('#theme').onclick=()=>{st.theme=st.theme==='dark'?'light':'dark'; applyPrefs();};
+
+$('#list').onclick=async e=>{
+  const b=e.target.closest('[data-a]'); if(!b)return;
+  const id=+b.dataset.id, d=DUAS.find(x=>x.id===id), a=b.dataset.a;
+  if(a==='fav'){
+    favs = favs.includes(id) ? favs.filter(x=>x!==id) : [...favs,id];
+    saveJSON('dd-favs',favs);
+  }
+  if(a==='inc'){
+    counts[id]=(counts[id]||0)+1; saveJSON('dd-counts',counts);
+    if(navigator.vibrate) navigator.vibrate(10);
+  }
+  if(a==='reset'){ delete counts[id]; saveJSON('dd-counts',counts); }
+  if(a==='copy'){ await copyText(plain(d,false)); toast('പകർത്തി · Copied'); }
+  if(a==='wa'){ window.open('https://wa.me/?text='+encodeURIComponent(plain(d,true)),'_blank'); }
+  if(a!=='copy' && a!=='wa') render();
+};
+
+/* Collapse header while scrolling down; expand when scrolling up */
+const hdr=document.querySelector('header');
+let lastY=0;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  if(y>140 && y>lastY+6){ hdr.classList.add('compact'); hdr.classList.remove('show-search'); }
+  else if(y<lastY-6 || y<60){ hdr.classList.remove('compact'); }
+  lastY=y;
+},{passive:true});
+
+/* Search icon: reveal the search box in compact mode */
+$('#srchBtn').onclick=()=>{
+  hdr.classList.remove('compact');
+  hdr.classList.toggle('show-search');
+  if(hdr.classList.contains('show-search')) $('#q').focus();
+};
+
+applyPrefs();
+</script>
+</body>
+</html>
